@@ -10,37 +10,38 @@
 #define WINDOW_WIDTH 960
 #define WINDOW_HEIGHT 720
 
-int map[TILE_MAP_WIDTH][TILE_MAP_HEIGHT]=
-{
-  {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
-  {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
-  {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
-  {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
-  {1,0,0,0,0,0,2,2,2,2,2,0,0,0,0,3,0,3,0,3,0,0,0,1},
-  {1,0,0,0,0,0,2,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,1},
-  {1,0,0,0,0,0,2,0,0,0,2,0,0,0,0,3,0,0,0,3,0,0,0,1},
-  {1,0,0,0,0,0,2,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,1},
-  {1,0,0,0,0,0,2,2,0,2,2,0,0,0,0,3,0,3,0,3,0,0,0,1},
-  {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
-  {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
-  {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
-  {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
-  {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
-  {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
-  {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
-  {1,4,4,4,4,4,4,4,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
-  {1,4,0,4,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
-  {1,4,0,0,0,0,5,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
-  {1,4,0,4,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
-  {1,4,0,4,4,4,4,4,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
-  {1,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
-  {1,4,4,4,4,4,4,4,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
-  {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1}
-};
+int map[TILE_MAP_WIDTH][TILE_MAP_HEIGHT] =
+    {
+        {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
+        {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
+        {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
+        {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
+        {1, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 0, 0, 0, 0, 3, 0, 3, 0, 3, 0, 0, 0, 1},
+        {1, 0, 0, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
+        {1, 0, 0, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0, 1},
+        {1, 0, 0, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
+        {1, 0, 0, 0, 0, 0, 2, 2, 0, 2, 2, 0, 0, 0, 0, 3, 0, 3, 0, 3, 0, 0, 0, 1},
+        {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
+        {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
+        {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
+        {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
+        {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
+        {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
+        {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
+        {1, 4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
+        {1, 4, 0, 4, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
+        {1, 4, 0, 0, 0, 0, 5, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
+        {1, 4, 0, 4, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
+        {1, 4, 0, 4, 4, 4, 4, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
+        {1, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
+        {1, 4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
+        {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}};
 
 float posX = 128.0f, posY = 128.0f;
 float viewDirX = -1.0f, viewDirY = 0.0f;
 float perpX = 0.0f, perpY = 0.66f;
+
+Texture2D wallTexture;
 
 void render();
 void update();
@@ -49,6 +50,8 @@ void raycast();
 int main()
 {
     InitWindow(WINDOW_WIDTH, WINDOW_HEIGHT, "Wolfenstein 3D RayCaster");
+
+    wallTexture = LoadTexture("../assets/stone_wall.png");
 
     while (!WindowShouldClose())
     {
@@ -73,11 +76,16 @@ void render()
 
 Color getColorCode(int number)
 {
-    if(number == 1) return BLUE;
-    if(number == 2) return GREEN;
-    if(number == 3) return RED;
-    if(number == 4) return WHITE;
-    if(number == 5) return YELLOW;
+    if (number == 1)
+        return BLUE;
+    if (number == 2)
+        return GREEN;
+    if (number == 3)
+        return RED;
+    if (number == 4)
+        return WHITE;
+    if (number == 5)
+        return YELLOW;
 
     return BLACK;
 }
@@ -98,10 +106,9 @@ void rotate(float angle)
     perpY = oldPerpX * sinA + perpY * cosA;
 }
 
-
 void update()
 {
-    const float MOVEMENT_SPEED = 50.0f;
+    const float MOVEMENT_SPEED = 10.0f;
     const float ROTATION_SPEED = -2.5f;
 
     float dt = GetFrameTime();
@@ -129,10 +136,9 @@ void update()
     }
 }
 
-
 void raycast()
 {
-    for(uint x = 0 ; x < WINDOW_WIDTH ; ++x)
+    for (uint x = 0; x < WINDOW_WIDTH; ++x)
     {
         float cameraX = 2 * x / float(WINDOW_WIDTH) - 1;
 
@@ -145,12 +151,10 @@ void raycast()
         float deltaDistX = rayDirX == 0 ? 1e30 : std::abs(1 / rayDirX);
         float deltaDistY = rayDirY == 0 ? 1e30 : std::abs(1 / rayDirY);
 
-        float sideDistX , sideDistY;
-        int stepX , stepY;
+        float sideDistX, sideDistY;
+        int stepX, stepY;
 
-        
-
-        if(rayDirX > 0)
+        if (rayDirX > 0)
         {
             stepX = 1;
             sideDistX = (((mapX + 1) * TILE_SIZE) - posX) * deltaDistX;
@@ -160,8 +164,8 @@ void raycast()
             stepX = -1;
             sideDistX = (posX - (mapX * TILE_SIZE)) * deltaDistX;
         }
-        
-        if(rayDirY > 0)
+
+        if (rayDirY > 0)
         {
             stepY = 1;
             sideDistY = (((mapY + 1) * TILE_SIZE) - posY) * deltaDistY;
@@ -174,9 +178,9 @@ void raycast()
 
         bool hit = false;
         bool sideY = false;
-        while(!hit)
+        while (!hit)
         {
-            if(sideDistX < sideDistY)
+            if (sideDistX < sideDistY)
             {
                 sideDistX += (deltaDistX * TILE_SIZE);
                 mapX += stepX;
@@ -189,23 +193,52 @@ void raycast()
                 sideY = true;
             }
 
-            if(map[mapX][mapY] > 0) hit = true;
+            if (map[mapX][mapY] > 0)
+                hit = true;
         }
 
         float perpWallDist = sideY ? (sideDistY - (deltaDistY * TILE_SIZE)) : (sideDistX - (deltaDistX * TILE_SIZE));
+
+        if (x == 100)
+            std::cout << "Perp wall dist " << perpWallDist << std::endl;
 
         int height = WINDOW_HEIGHT / perpWallDist;
 
         int lineStart = -height / 2 + WINDOW_HEIGHT / 2;
         int lineEnd = height / 2 + WINDOW_HEIGHT / 2;
 
-        if(lineStart < 0) lineStart = 0;
-        if(lineEnd > WINDOW_HEIGHT) lineEnd = WINDOW_HEIGHT;
+        float wallX;
+        if (sideY)
+            wallX = posX + perpWallDist * rayDirX;
+        else
+            wallX = posY + perpWallDist * rayDirY;
 
-        Color color = getColorCode(map[mapX][mapY]);
+        wallX -= floor(wallX);
 
-        if(sideY) color = Color{static_cast<unsigned char>(color.r / 2.0f) , static_cast<unsigned char>(color.g / 2.0f) , static_cast<unsigned char>(color.b / 2.0f) , color.a};
+        if (!sideY && rayDirX > 0)
+            wallX = 1.0 - wallX;
+        if (sideY && rayDirY < 0)
+            wallX = 1.0 - wallX;
 
-        DrawLine(x , lineStart , x , lineEnd , color);
+        // if (lineStart < 0)
+        //     lineStart = 0;
+        // if (lineEnd > WINDOW_HEIGHT)
+        //     lineEnd = WINDOW_HEIGHT;
+
+        // Color color = getColorCode(map[mapX][mapY]);
+
+        // if(sideY) color = Color{static_cast<unsigned char>(color.r / 2.0f) , static_cast<unsigned char>(color.g / 2.0f) , static_cast<unsigned char>(color.b / 2.0f) , color.a};
+
+        // DrawLine(x , lineStart , x , lineEnd , color);
+
+        int textureStartPos = wallTexture.width * wallX;
+
+        if (textureStartPos >= wallTexture.width)
+            textureStartPos = wallTexture.width - 1;
+
+
+        Rectangle src{textureStartPos, 0.0f, 1, (float)wallTexture.height};
+        Rectangle dest{(float)x, (float)lineStart, 1, (float)height};
+        DrawTexturePro(wallTexture, src, dest, Vector2{0.0f, 0.0f}, 0.0f, WHITE);
     }
 }
