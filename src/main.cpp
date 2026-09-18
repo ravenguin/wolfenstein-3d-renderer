@@ -67,7 +67,7 @@ void render()
 {
     BeginDrawing();
 
-    ClearBackground(BLACK);
+    ClearBackground(GRAY);
 
     raycast();
 
@@ -199,9 +199,6 @@ void raycast()
 
         float perpWallDist = sideY ? (sideDistY - (deltaDistY * TILE_SIZE)) : (sideDistX - (deltaDistX * TILE_SIZE));
 
-        if (x == 100)
-            std::cout << "Perp wall dist " << perpWallDist << std::endl;
-
         int height = WINDOW_HEIGHT / perpWallDist;
 
         int lineStart = -height / 2 + WINDOW_HEIGHT / 2;
@@ -220,25 +217,25 @@ void raycast()
         if (sideY && rayDirY < 0)
             wallX = 1.0 - wallX;
 
-        // if (lineStart < 0)
-        //     lineStart = 0;
-        // if (lineEnd > WINDOW_HEIGHT)
-        //     lineEnd = WINDOW_HEIGHT;
+        if (lineStart < 0)
+            lineStart = 0;
+        if (lineEnd > WINDOW_HEIGHT)
+            lineEnd = WINDOW_HEIGHT;
 
-        // Color color = getColorCode(map[mapX][mapY]);
+        Color color = getColorCode(map[mapX][mapY]);
 
-        // if(sideY) color = Color{static_cast<unsigned char>(color.r / 2.0f) , static_cast<unsigned char>(color.g / 2.0f) , static_cast<unsigned char>(color.b / 2.0f) , color.a};
+        if(sideY) color = Color{static_cast<unsigned char>(color.r / 2.0f) , static_cast<unsigned char>(color.g / 2.0f) , static_cast<unsigned char>(color.b / 2.0f) , color.a};
 
-        // DrawLine(x , lineStart , x , lineEnd , color);
+        DrawLine(x , lineStart , x , lineEnd , color);
 
-        int textureStartPos = wallTexture.width * wallX;
+        // int textureStartPos = wallTexture.width * wallX;
 
-        if (textureStartPos >= wallTexture.width)
-            textureStartPos = wallTexture.width - 1;
+        // if (textureStartPos >= wallTexture.width)
+        //     textureStartPos = wallTexture.width - 1;
 
 
-        Rectangle src{textureStartPos, 0.0f, 1, (float)wallTexture.height};
-        Rectangle dest{(float)x, (float)lineStart, 1, (float)height};
-        DrawTexturePro(wallTexture, src, dest, Vector2{0.0f, 0.0f}, 0.0f, WHITE);
+        // Rectangle src{textureStartPos, 0.0f, 1, (float)wallTexture.height};
+        // Rectangle dest{(float)x, (float)lineStart, 1, (float)height};
+        // DrawTexturePro(wallTexture, src, dest, Vector2{0.0f, 0.0f}, 0.0f, WHITE);
     }
 }
